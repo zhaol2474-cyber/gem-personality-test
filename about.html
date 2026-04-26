@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 - 宝石之名</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- 导航栏 -->
+        <header>
+            <nav>
+                <a href="index.html" class="nav-logo">宝石之名</a>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="intro.html">测试说明</a></li>
+                    <li><a href="gallery.html">人格图鉴</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 主要内容 -->
+        <main>
+            <!-- 页面标题 -->
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="section-title">关于</h1>
+                </div>
+            </section>
+
+            <!-- 关于内容 -->
+            <section class="about-section">
+                <div class="container">
+                    <div class="glass-card">
+                        <h2 class="about-section-title">网站主题</h2>
+                        <p class="section-text">
+                            "宝石之名"是一个基于心理学原理设计的人格测试网站，旨在通过24道精心设计的问题，
+                            帮助用户发现自己内在的人格特质，并将其与对应的宝石类型相匹配。
+                        </p>
+                        <p class="section-text">
+                            网站以"宝石"为核心意象，将人格特质与不同宝石的特性相结合，
+                            创造出一种独特的自我探索体验。每一种宝石都代表着一种独特的人格类型，
+                            用户通过测试可以了解自己的性格特点和行为模式。
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2 class="about-section-title">设计灵感</h2>
+                        <p class="section-text">
+                            网站的设计灵感来源于宝石的自然美感和神秘感。宝石作为自然界中最美丽的产物之一，
+                            其独特的色彩、光泽和晶体结构为设计提供了丰富的视觉元素。
+                        </p>
+                        <p class="section-text">
+                            我们希望通过网站的设计，营造出一种轻盈、清透、精致的氛围，
+                            让用户在测试过程中感受到如同探索宝石般的奇妙体验。
+                            网站的色彩方案以浅灰蓝色系为主，搭配宝石感的多色渐变，
+                            创造出一种高级、梦幻的视觉效果。
+                        </p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2 class="about-section-title">页面结构</h2>
+                        <p class="section-text">
+                            网站采用多页面结构，包括：
+                        </p>
+                        <ul class="structure-list">
+                            <li class="structure-item">
+                                <span class="structure-name">首页 (index.html)</span>
+                                <span class="structure-desc">网站的封面页，展示网站主题和核心文案</span>
+                            </li>
+                            <li class="structure-item">
+                                <span class="structure-name">测试说明页 (intro.html)</span>
+                                <span class="structure-desc">介绍测试规则和流程</span>
+                            </li>
+                            <li class="structure-item">
+                                <span class="structure-name">测试题1-12页 (quiz1.html)</span>
+                                <span class="structure-desc">展示测试的前12道题目</span>
+                            </li>
+                            <li class="structure-item">
+                                <span class="structure-name">测试题13-24页 (quiz2.html)</span>
+                                <span class="structure-desc">展示测试的后12道题目</span>
+                            </li>
+                            <li class="structure-item">
+                                <span class="structure-name">结果页 (result.html)</span>
+                                <span class="structure-desc">展示测试结果和详细分析</span>
+                            </li>
+                            <li class="structure-item">
+                                <span class="structure-name">人格图鉴页 (gallery.html)</span>
+                                <span class="structure-desc">展示12种宝石人格的详细信息</span>
+                            </li>
+                            <li class="structure-item">
+                                <span class="structure-name">关于页 (about.html)</span>
+                                <span class="structure-desc">介绍网站的设计理念和技术实现</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2 class="about-section-title">测试逻辑</h2>
+                        <p class="section-text">
+                            测试采用专业的计分算法，根据用户的选择计算出与每种宝石人格的匹配度。
+                            系统会综合考虑用户的所有回答，最终为用户匹配最适合的宝石人格类型。
+                        </p>
+                        <p class="section-text">
+                            如果出现分数相同的情况，系统会通过多轮比较来确定最终结果：
+                        </p>
+                        <ol class="logic-list">
+                            <li class="logic-item">
+                                <span class="logic-step">第一轮</span>
+                                <span class="logic-desc">比较核心题（Q4、Q5、Q9、Q11、Q13、Q15、Q18、Q21、Q24）的得分</span>
+                            </li>
+                            <li class="logic-item">
+                                <span class="logic-step">第二轮</span>
+                                <span class="logic-desc">比较Q13-Q24的得分</span>
+                            </li>
+                            <li class="logic-item">
+                                <span class="logic-step">第三轮</span>
+                                <span class="logic-desc">按固定优先级判定：钻石 > 蓝宝石 > 翡翠 > 黑曜石 > 红宝石 > 黄钻石 > 紫水晶 > 摩根石 > 变石 > 西瓜碧玺 > 橄榄石 > 磷叶石</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2 class="about-section-title">使用技术</h2>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <h3 class="tech-name">HTML5</h3>
+                                <p class="tech-desc">使用语义化标签，构建清晰的页面结构</p>
+                            </div>
+                            <div class="tech-item">
+                                <h3 class="tech-name">CSS3</h3>
+                                <p class="tech-desc">使用CSS变量、渐变、动画等特性，实现精美的视觉效果</p>
+                            </div>
+                            <div class="tech-item">
+                                <h3 class="tech-name">JavaScript</h3>
+                                <p class="tech-desc">实现测试逻辑、结果计算、数据存储等功能</p>
+                            </div>
+                            <div class="tech-item">
+                                <h3 class="tech-name">localStorage</h3>
+                                <p class="tech-desc">用于存储用户的测试答案，确保测试过程的连续性</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <h2 class="about-section-title">响应式设计</h2>
+                        <p class="section-text">
+                            网站采用响应式设计，确保在不同设备上都能提供良好的用户体验。
+                            主要适配以下设备：
+                        </p>
+                        <ul class="responsive-list">
+                            <li class="responsive-item">
+                                <span class="responsive-device">桌面端</span>
+                                <span class="responsive-desc">完整的页面布局和功能</span>
+                            </li>
+                            <li class="responsive-item">
+                                <span class="responsive-device">平板端</span>
+                                <span class="responsive-desc">适当调整布局，保持良好的阅读体验</span>
+                            </li>
+                            <li class="responsive-item">
+                                <span class="responsive-device">手机端</span>
+                                <span class="responsive-desc">优化布局和交互，确保在小屏幕上的可用性</span>
+                            </li>
+                        </ul>
+                        <p class="section-text">
+                            网站使用CSS媒体查询和弹性布局，根据屏幕尺寸自动调整页面元素的大小和位置，
+                            确保在各种设备上都能呈现出最佳的视觉效果。
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <div class="footer-content">
+                <p class="footer-text">© 2026 宝石之名 - 宝石人格测试</p>
+                <p class="footer-text">一个探索内心世界的奇妙旅程</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="js/main.js"></script>
+</body>
+</html>

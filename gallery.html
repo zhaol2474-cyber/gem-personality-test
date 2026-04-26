@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝石人格图鉴 - 宝石之名</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- 导航栏 -->
+        <header>
+            <nav>
+                <a href="index.html" class="nav-logo">宝石之名</a>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="intro.html">测试说明</a></li>
+                    <li><a href="gallery.html">人格图鉴</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 主要内容 -->
+        <main>
+            <!-- 页面标题 -->
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="section-title">宝石人格图鉴</h1>
+                    <p class="section-subtitle">探索十二种独特的人格宝石</p>
+                </div>
+            </section>
+
+            <!-- 宝石图鉴 -->
+            <section class="gallery-section">
+                <div class="container">
+                    <div id="gem-gallery" class="gem-gallery">
+                        <!-- 宝石卡片会通过JavaScript动态生成 -->
+                        <div class="loading-message">
+                            <div class="loading-spinner"></div>
+                            <p>正在加载宝石图鉴...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <div class="footer-content">
+                <p class="footer-text">© 2026 宝石之名 - 宝石人格测试</p>
+                <p class="footer-text">一个探索内心世界的奇妙旅程</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 页面加载完成后初始化图鉴
+        document.addEventListener('DOMContentLoaded', function() {
+            initGallery();
+        });
+
+        // 初始化宝石图鉴
+        function initGallery() {
+            const galleryContainer = document.getElementById('gem-gallery');
+            if (!galleryContainer) return;
+
+            // 清空加载状态
+            galleryContainer.innerHTML = '';
+
+            // 显示所有12种人格卡片
+            const allGems = Object.keys(personalities);
+            
+            allGems.forEach(gemId => {
+                const gem = personalities[gemId];
+                if (gem) {
+                    const gemCard = createGemCard(gemId, gem);
+                    galleryContainer.appendChild(gemCard);
+                }
+            });
+        }
+
+        // 创建宝石卡片
+        function createGemCard(id, gem) {
+            const card = document.createElement('div');
+            card.className = 'gem-card';
+            card.dataset.gem = id;
+
+            card.innerHTML = `
+                <div class="gem-card-header">
+                    <img src="${gem.image}" alt="${gem.name}" class="gem-card-image">
+                    <h3 class="gem-card-name">${gem.name}</h3>
+                    <p class="gem-card-tagline">"${gem.slogan}"</p>
+                    <div class="gem-card-keywords">
+                        ${gem.keywords.map(keyword => `<span class="keyword-tag">${keyword}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="gem-card-content">
+                    <p class="gem-card-intro">${gem.shortIntro}</p>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleGemDetails(this)">
+                        查看详情
+                    </button>
+                </div>
+                <div class="gem-card-desc">
+                    <div class="gem-card-desc-inner">
+                        <div class="gem-card-desc-content">
+                            <h4>人格特质</h4>
+                            <p>${gem.description}</p>
+                            <h4>人际关系</h4>
+                            <p>${gem.relationship}</p>
+                            <h4>理想生活</h4>
+                            <p>${gem.lifestyle}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // 切换宝石详情
+        function toggleGemDetails(element) {
+            const card = element.closest('.gem-card');
+            const button = card.querySelector('.btn-secondary');
+            
+            if (card.classList.contains('expanded')) {
+                card.classList.remove('expanded');
+                if (button) button.textContent = '查看详情';
+            } else {
+                card.classList.add('expanded');
+                if (button) button.textContent = '收起详情';
+            }
+        }
+    </script>
+</body>
+</html>

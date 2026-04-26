@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试结果 - 宝石之名</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- 导航栏 -->
+        <header>
+            <nav>
+                <a href="index.html" class="nav-logo">宝石之名</a>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="intro.html">测试说明</a></li>
+                    <li><a href="gallery.html">人格图鉴</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 主要内容 -->
+        <main>
+            <!-- 页面标题 -->
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">测试结果</h1>
+                </div>
+            </section>
+
+            <!-- 结果展示 -->
+            <section class="result-section">
+                <div class="container">
+                    <div id="result-container" class="result-container">
+                        <!-- 结果会通过JavaScript动态生成 -->
+                        <div class="loading-message">
+                            <div class="loading-spinner"></div>
+                            <p>正在计算你的宝石人格...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <div class="footer-content">
+                <p class="footer-text">© 2026 宝石之名 - 宝石人格测试</p>
+                <p class="footer-text">一个探索内心世界的奇妙旅程</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/result.js"></script>
+    <script>
+        // 页面加载完成后初始化结果页
+        document.addEventListener('DOMContentLoaded', function() {
+            initResultPage();
+        });
+    </script>
+</body>
+</html>
