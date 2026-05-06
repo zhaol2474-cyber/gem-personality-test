@@ -335,68 +335,28 @@ main {
     z-index: -1;
 }
 
-.hero-crystals {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-}
 
-.hero-crystal {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: rgba(148, 163, 184, 0.1);
-    border-radius: 50%;
-    backdrop-filter: blur(10px);
-    animation: float 6s ease-in-out infinite;
-}
-
-.hero-crystal:nth-child(1) {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.hero-crystal:nth-child(2) {
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
-}
-
-.hero-crystal:nth-child(3) {
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 4s;
-}
-
-.hero-crystal:nth-child(4) {
-    top: 40%;
-    right: 25%;
-    animation-delay: 1s;
-}
 
 .hero-content {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin: -60px auto 0;
     position: relative;
     z-index: 2;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: var(--spacing-md);
-    letter-spacing: 2px;
+    font-size: 5.25rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 8px;
     background: var(--title-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     filter: drop-shadow(0 4px 16px var(--title-glow));
     animation: fadeInDown var(--transition-slow) ease-out;
+    font-family: 'Ma Shan Zheng', 'Noto Sans SC', cursive;
 }
 
 .hero-subtitle {
@@ -405,6 +365,192 @@ main {
     color: var(--text-secondary);
     line-height: 1.8;
     animation: fadeInUp var(--transition-slow) ease-out 0.2s both;
+}
+
+/* 首页插图样式 */
+.hero-illustration {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.88;
+    width: 200px;
+    height: 360px;
+}
+
+.hero-illustration-left {
+    left: calc(50% - 655px);
+    top: 64.7%;
+    transform: translateY(-45%);
+    animation: floatGentleLeft 8s ease-in-out infinite;
+}
+
+.hero-illustration-right {
+    right: calc(50% - 552px);
+    top: 36%;
+    transform: translateY(-55%);
+    animation: floatGentleRight 9s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.hero-illustration-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 38% 38% 42% 42%;
+    overflow: hidden;
+}
+
+.hero-illustration-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.02) brightness(1.03);
+    transition: all var(--transition-normal);
+}
+
+/* 轻微浮动动画 - 左图 */
+@keyframes floatGentleLeft {
+    0%, 100% {
+        transform: translateY(-45%);
+    }
+    50% {
+        transform: translateY(-47%);
+    }
+}
+
+/* 轻微浮动动画 - 右图（不同步） */
+@keyframes floatGentleRight {
+    0%, 100% {
+        transform: translateY(-55%);
+    }
+    50% {
+        transform: translateY(-53%);
+    }
+}
+
+/* 响应式插图 */
+@media (max-width: 1300px) {
+    .hero-illustration {
+        width: 175px;
+        height: 315px;
+    }
+    
+    .hero-illustration-left {
+        left: calc(50% - 580px);
+    }
+    
+    .hero-illustration-right {
+        right: calc(50% - 480px);
+    }
+}
+
+@media (max-width: 1150px) {
+    .hero-illustration {
+        width: 150px;
+        height: 270px;
+        opacity: 0.78;
+    }
+    
+    .hero-illustration-left {
+        left: calc(50% - 520px);
+    }
+    
+    .hero-illustration-right {
+        right: calc(50% - 420px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-illustration {
+        width: 130px;
+        height: 235px;
+        opacity: 0.7;
+    }
+    
+    .hero-illustration-left {
+        left: calc(50% - 460px);
+        top: 60%;
+    }
+    
+    .hero-illustration-right {
+        right: calc(50% - 380px);
+        top: 38%;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-illustration {
+        width: 110px;
+        height: 200px;
+        opacity: 0.62;
+    }
+    
+    .hero-illustration-left {
+        left: calc(50% - 400px);
+    }
+    
+    .hero-illustration-right {
+        right: calc(50% - 330px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-illustration {
+        width: 85px;
+        height: 155px;
+        opacity: 0.52;
+    }
+    
+    .hero-illustration-left {
+        left: 10px;
+        top: auto;
+        bottom: 20%;
+        transform: translateY(0);
+        animation: none;
+    }
+    
+    .hero-illustration-right {
+        right: 10px;
+        top: 10%;
+        transform: translateY(0);
+        animation: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+    
+    .hero-illustration {
+        width: 60px;
+        height: 110px;
+        opacity: 0.42;
+    }
+    
+    .hero-illustration-left {
+        left: 5px;
+        bottom: 22%;
+    }
+    
+    .hero-illustration-right {
+        right: 5px;
+        top: 12%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-illustration {
+        width: 50px;
+        height: 90px;
+        opacity: 0.32;
+    }
 }
 
 /* 滚动引导 */
@@ -1125,11 +1271,13 @@ footer {
 /* 响应式调整 */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        letter-spacing: 4px;
+        margin-bottom: 0.75rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
     
     .gem-showcase {

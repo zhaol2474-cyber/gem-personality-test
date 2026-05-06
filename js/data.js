@@ -109,7 +109,7 @@ const questions = [
     },
     {
         id: 'q11',
-        text: '下面哪种“强大”最让你向往？',
+        text: '下面哪种"强大"最让你向往？',
         options: [
             { id: 'a', text: '能坚持原则，不被轻易动摇', scores: { diamond: 1 } },
             { id: 'b', text: '能保留幻想和灵气，不被现实磨平', scores: { amethyst: 1 } },
@@ -139,7 +139,7 @@ const questions = [
     },
     {
         id: 'q14',
-        text: '如果别人说你“变化挺大的”，你的第一反应更像？',
+        text: '如果别人说你"变化挺大的"，你的第一反应更像？',
         options: [
             { id: 'a', text: '是啊，我一直都在变，也在试着适应', scores: { sapphire: 1 } },
             { id: 'b', text: '我本来就会随着阶段不同展现不同面向', scores: { alexandrite: 1 } },
@@ -256,7 +256,7 @@ const personalities = {
     diamond: {
         id: 'diamond',
         name: '钻石型人格',
-        image: "assetsimagesgems/diamond.png",
+        image: "assetsimagesgems/diamond.webp",
         slogan: '清醒是我的锋面，坚定是我的光。',
         keywords: ['坚定', '原则', '清晰可靠'],
         shortIntro: '你的人格核心很稳，很多时候并不会轻易随波逐流。',
@@ -267,7 +267,7 @@ const personalities = {
     sapphire: {
         id: 'sapphire',
         name: '蓝宝石型人格',
-        image: "assetsimagesgems/sapphire.png",
+        image: "assetsimagesgems/sapphire.webp",
         slogan: '我不喧哗，但我始终稳定而清醒。',
         keywords: ['理性', '沉稳', '秩序感'],
         shortIntro: '你是一个很擅长维持内部秩序的人，面对复杂局面通常会先思考。',
@@ -278,18 +278,18 @@ const personalities = {
     emerald: {
         id: 'emerald',
         name: '翡翠型人格',
-        image: "assetsimagesgems/jadeite.png",
+        image: "assetsimagesgems/jadeite.webp",
         slogan: '真正的分量，不需要大声证明。',
         keywords: ['平衡', '包容', '成熟稳定'],
         shortIntro: '你是那种越接触越能感受到价值的人，擅长在复杂中寻找平衡。',
-        description: '你是那种越接触越能感受到价值的人。你不追求极端，也不太容易被短暂情绪和外部刺激牵着走。你擅长在复杂中寻找平衡，在冲突中保留分寸，在变化里维持基本稳定。你不一定是最锋利、最耀眼的类型，但往往很有“长期相处价值”——稳、温润、有耐心，也有内在秩序。你知道什么时候该让，什么时候该守，不轻易失控，也不轻易极端。你像翡翠，温润而有质感，不张扬，却非常经得起时间打量。',
+        description: '你是那种越接触越能感受到价值的人。你不追求极端，也不太容易被短暂情绪和外部刺激牵着走。你擅长在复杂中寻找平衡，在冲突中保留分寸，在变化里维持基本稳定。你不一定是最锋利、最耀眼的类型，但往往很有"长期相处价值"——稳、温润、有耐心，也有内在秩序。你知道什么时候该让，什么时候该守，不轻易失控，也不轻易极端。你像翡翠，温润而有质感，不张扬，却非常经得起时间打量。',
         relationship: '你在人际中通常给人一种可靠、温和、成熟的印象。你不喜欢把关系推到失衡边缘，也很擅长照顾整体氛围。你欣赏有分寸、讲尊重、能长久相处的人。对你来说，关系不是短暂燃烧，而是值得维护的稳定生态。',
-        lifestyle: '温润、安稳、有质感、有秩序感的生活；不需要过度戏剧化，但要经得起长久停留；空间和关系都要让人有“可以安心待下去”的感觉。'
+        lifestyle: '温润、安稳、有质感、有秩序感的生活；不需要过度戏剧化，但要经得起长久停留；空间和关系都要让人有"可以安心待下去"的感觉。'
     },
     obsidian: {
         id: 'obsidian',
         name: '黑曜石型人格',
-        image: "assetsimagesgems/obsidian.png",
+        image: "assetsimagesgems/obsidian.webp",
         slogan: '我的沉默不是空白，而是清晰的边界。',
         keywords: ['边界', '冷静', '自我保护'],
         shortIntro: '你很清楚保护自己有多重要，不会随便允许任何人越过你的边界。',
@@ -300,7 +300,7 @@ const personalities = {
     ruby: {
         id: 'ruby',
         name: '红宝石型人格',
-        image: "assetsimagesgems/ruby.png",
+        image: "assetsimagesgems/ruby.webp",
         slogan: '热烈不是失控，而是我认真活过的痕迹。',
         keywords: ['热烈', '主动', '行动力'],
         shortIntro: '你有很强的推进感和生命张力，更习惯直接进入、直接行动。',
@@ -311,51 +311,51 @@ const personalities = {
     yellowDiamond: {
         id: 'yellowDiamond',
         name: '黄钻石型人格',
-        image: "assetsimagesgems/yellow-diamond.png",
+        image: "assetsimagesgems/yellow-diamond.webp",
         slogan: '不是借来的光，我本身就会发亮。',
         keywords: ['明亮', '自信', '感染力'],
         shortIntro: '你是那种自带提亮效果的人，身上往往有一种明显的生命力。',
         description: '你是那种自带提亮效果的人。你身上往往有一种明显的生命力，不一定时时高调，却很容易在人群中留下鲜明印象。你喜欢积极的氛围，也擅长把热情和能量传递给身边的人。你不是浅层的热闹，而是一种带有底气的明亮——知道自己有想法、有价值，也愿意让自己的光被看见。你通常不太甘于暗淡无声地存在，更愿意主动参与、主动表达、主动把气氛撑起来。你像黄钻石，耀眼却不刺目，华丽中有一种很稳的自我确认感。',
-        relationship: '你很容易成为关系里的“提气者”，别人和你在一起时，往往会觉得氛围更轻快、更有活力。你欣赏真诚直接的互动，也喜欢能够接住你的热情和表达欲的人。你不太适合长期待在压抑、沉闷、缺乏回应的关系里，因为你需要光被看见，也需要情绪被回应。',
+        relationship: '你很容易成为关系里的"提气者"，别人和你在一起时，往往会觉得氛围更轻快、更有活力。你欣赏真诚直接的互动，也喜欢能够接住你的热情和表达欲的人。你不太适合长期待在压抑、沉闷、缺乏回应的关系里，因为你需要光被看见，也需要情绪被回应。',
         lifestyle: '明亮、开阔、有审美感、有被看见机会的生活；既有热闹的时刻，也有能让你发光的舞台；生活里最好总有值得期待的新鲜事。'
     },
     amethyst: {
         id: 'amethyst',
         name: '紫水晶型人格',
-        image: "assetsimagesgems/amethyst.png",
+        image: "assetsimagesgems/amethyst.webp",
         slogan: '我愿意清醒地活着，也愿意为梦保留位置。',
         keywords: ['浪漫', '灵感', '精神性'],
         shortIntro: '你拥有很丰富的内在世界，容易被氛围、意义和深层情绪打动。',
         description: '你拥有很丰富的内在世界。很多时候，你真正的重量不在外在行动力，而在那些别人未必能立刻看见的感受、联想、想象力和精神空间里。你容易被氛围、意义、象征、审美和深层情绪打动，也很难完全接受生活只剩下效率、结果和实用。你不是脱离现实，而是希望现实之外，仍然有美、有梦、有一点神秘和诗意。你像紫水晶，在静处泛出微光，既有克制的冷静，也有深层的浪漫。',
-        relationship: '你更容易被“精神共鸣”吸引，而不是单纯被热闹或表面条件打动。你希望关系里有理解、有审美上的靠近、有对复杂情绪的接纳。你不一定总把自己说得很直白，但如果遇到能读懂你的人，你会非常珍惜那种稀有的连接。',
+        relationship: '你更容易被"精神共鸣"吸引，而不是单纯被热闹或表面条件打动。你希望关系里有理解、有审美上的靠近、有对复杂情绪的接纳。你不一定总把自己说得很直白，但如果遇到能读懂你的人，你会非常珍惜那种稀有的连接。',
         lifestyle: '安静、带一点梦感和仪式感的生活；有书、有音乐、有夜晚、有独处，也有能分享灵感和感受的人；生活不必一直喧闹，但必须保留意义感。'
     },
     morganite: {
         id: 'morganite',
         name: '摩根石型人格',
-        image: "assetsimagesgems/morganite.png",
+        image: "assetsimagesgems/morganite.webp",
         slogan: '温柔不是退让，而是我理解世界的方式。',
         keywords: ['温柔', '治愈', '共情'],
         shortIntro: '你的人格里有一种很柔和的力量，擅长让人放松、让环境变得柔软。',
-        description: '你的人格里有一种很柔和的力量。你并不总是最先站出来、最先发声的人，但你很擅长让人放松、让环境变得柔软、让情绪有地方落下来。你能感知细微的情感，也很愿意用理解、安抚和耐心去回应别人。很多时候，你的价值不在于“推进”或“征服”，而在于让世界不那么刺、不那么硬。你不是没有边界，而是你表达力量的方式更像春天：不猛烈，却能慢慢融化僵硬。你像摩根石，带着柔粉色的温润光泽，安静地散发治愈感。',
+        description: '你的人格里有一种很柔和的力量。你并不总是最先站出来、最先发声的人，但你很擅长让人放松、让环境变得柔软、让情绪有地方落下来。你能感知细微的情感，也很愿意用理解、安抚和耐心去回应别人。很多时候，你的价值不在于"推进"或"征服"，而在于让世界不那么刺、不那么硬。你不是没有边界，而是你表达力量的方式更像春天：不猛烈，却能慢慢融化僵硬。你像摩根石，带着柔粉色的温润光泽，安静地散发治愈感。',
         relationship: '你很适合建立深层关系，也往往是朋友、恋人或家人愿意倾诉的人。你擅长共情，也很懂得照顾别人情绪，不过有时也容易把自己放得太靠后。你最适合的关系，是那种既能让你温柔待人，也能温柔待你的关系。',
         lifestyle: '柔和、温暖、松弛、有情绪流动空间的生活；可以慢一点，可以软一点，不必一直强撑；最好有花、暖光、布艺、安静陪伴和细腻交流。'
     },
     alexandrite: {
         id: 'alexandrite',
         name: '变石型人格',
-        image: "assetsimagesgems/alexandrite.png",
+        image: "assetsimagesgems/alexandrite.webp",
         slogan: '我不是难以定义，我只是拥有不止一种光。',
         keywords: ['多面', '适应', '神秘流动'],
         shortIntro: '你不是单一面向的人，会随着环境、阶段和关系对象的不同展现不同状态。',
         description: '你不是单一面向的人。你会随着环境、阶段和关系对象的不同，展现出不同的状态和色彩。有人会觉得你变化很大、很难被彻底概括，但这并不意味着你不稳定，而是说明你有很强的适应力和流动性。你能感受到局势，也能迅速调整自己的位置和表达方式。你并不执着于始终用同一种面貌面对世界，因为你知道，复杂并不等于虚假，多面反而是一种能力。你像变石，在不同光线下呈现不同颜色，不是伪装，而是层次本身就是你的一部分。',
-        relationship: '你很会因人制宜，也很懂得在不同关系里找到相处方式。你的人际弹性很强，既能和热闹的人来往，也能接住安静细腻的人。只是对你来说，真正难得的关系不是“谁最懂你的一面”，而是“谁能允许你拥有很多面”。你不喜欢被单一标签锁死。',
+        relationship: '你很会因人制宜，也很懂得在不同关系里找到相处方式。你的人际弹性很强，既能和热闹的人来往，也能接住安静细腻的人。只是对你来说，真正难得的关系不是"谁最懂你的一面"，而是"谁能允许你拥有很多面"。你不喜欢被单一标签锁死。',
         lifestyle: '允许变化、允许试错、允许不断切换状态的生活；既有新鲜感，也有空间感；你希望自己不是被固定住，而是能在不同阶段自由生长。'
     },
     watermelonTourmaline: {
         id: 'watermelonTourmaline',
         name: '西瓜碧玺型人格',
-        image: "assetsimagesgems/watermelon-tourmaline.png",
+        image: "assetsimagesgems/watermelon-tourmaline.webp",
         slogan: '我愿意真诚地热烈，也愿意鲜活地柔软。',
         keywords: ['真诚', '鲜活', '情感丰沛'],
         shortIntro: '你的人格不是单一色调，而是带着丰富层次和鲜明情感的。',
@@ -366,7 +366,7 @@ const personalities = {
     peridot: {
         id: 'peridot',
         name: '橄榄石型人格',
-        image: "assetsimagesgems/peridot.png",
+        image: "assetsimagesgems/peridot.webp",
         slogan: '我会继续向光，也会轻轻地把自己带回春天。',
         keywords: ['轻快', '乐观', '生机感'],
         shortIntro: '你身上有一种天然的向前感，有能力在低谷之后重新回到有光的地方。',
@@ -377,7 +377,7 @@ const personalities = {
     phosphophyllite: {
         id: 'phosphophyllite',
         name: '磷叶石型人格',
-        image: "assetsimagesgems/phosphophyllite.png",
+        image: "assetsimagesgems/phosphophyllite.webp",
         slogan: '在变化中生长，在脆弱里发光。',
         keywords: ['敏感', '蜕变', '轻盈成长'],
         shortIntro: '你是那种对世界变化格外敏锐的人，在不安里继续往前长。',
